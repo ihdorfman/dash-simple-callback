@@ -7,21 +7,21 @@ from collections import deque, Counter
 
 ########### Define your variables ######
 
-myheading1='Try out a palindrome here!'
-initial_value='A nut for a jar of tuna'
+myheading1='Prepare your ANGRY Tweets here'
+initial_value="Shouting placeholder"
 longtext='''
         _Suggestions you might try:_
-        * A man, a plan, a canal: Panama!
-        * Go hang a salami I'm a lasanga hog
-        * God! Nate bit a Tibetan dog!
+        * No you!
+        * Bite me
+        * Piss off mate
         '''
-tabtitle = 'racecar'
-sourceurl = 'https://www.grammarly.com/blog/16-surprisingly-funny-palindromes/'
-githublink = 'https://github.com/austinlasseter/dash-simple-callback'
+tabtitle = 'AutoTweet'
+sourceurl = 'https://www.twitter.com'
+githublink = 'https://github.com/ihdorfman/dash-simple-callback'
 
 ########### Define a function for your callback:
 def my_function(letters):
-    return(letters[::-1])
+    return(letters.upper()+'!!!!!!!!!')
 
 ########### Initiate the app
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
@@ -50,8 +50,8 @@ app.layout = html.Div(children=[
     [Input(component_id='my-id', component_property='value')]
 )
 def update_output_div(input_value):
-    palin=my_function(input_value)
-    return f"You've entered '{input_value}', and your output is '{palin}'"
+    angry=my_function(input_value)
+    return f"The next time someone disagrees with you on Twitter the proper response is: '{angry}'"
 
 ############ Deploy
 if __name__ == '__main__':
